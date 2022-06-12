@@ -1,22 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
 	#region FIELDS
 
 	[SerializeField]
-	private View viewModule = null;
+	private View _viewModule = null;
 	[SerializeField]
-	private Model modelModule = null;
+	private Model _modelModule = null;
 
 	#endregion
 
 	#region PROPERTIES
 
-	protected View ViewModule => viewModule;
-	protected Model ModelModule => modelModule;
+	protected View ViewModule => _viewModule;
+	protected Model ModelModule => _modelModule;
 
 	#endregion
 

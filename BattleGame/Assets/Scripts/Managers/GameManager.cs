@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Zenject;
 
 namespace Managers
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : MonoBehaviour, IGameManager
     {
         #region MEMBERS
+
+        private ISceneManager _sceneManager;
 
         #endregion
 
@@ -23,9 +27,20 @@ namespace Managers
 
         #region METHODS
 
+        [Inject]
+        public void InjectDependencies(ISceneManager sceneManager)
+        {
+            _sceneManager = sceneManager;
+        }
+
+        public void LoadFirstLevel()
+        {
+            _sceneManager.LoadFirstLevel();
+        }
+
         private void LoadMenuScene()
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(Constants.MAIN_SCENE_MAIN);
+            _sceneManager.LoadMenuScene();
         }
 
         #endregion

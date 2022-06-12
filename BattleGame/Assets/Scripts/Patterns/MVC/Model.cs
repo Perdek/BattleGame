@@ -5,24 +5,24 @@ using UnityEngine;
 
 public class Model : MonoBehaviour
 {
-	#region FIELDS
+    #region FIELDS
 
-	#endregion
+    #endregion
 
-	#region PROPERTIES
+    #region PROPERTIES
 
-	#endregion
+    #endregion
 
-	#region METHODS
+    #region METHODS
 
-	public virtual void Initialize()
-	{
+    public virtual void Initialize()
+    {
 
-	}
+    }
 
-	#endregion
+    #endregion
 
-	#region ENUMS
+    #region ENUMS
 
-	#endregion
+    #endregion
 }
